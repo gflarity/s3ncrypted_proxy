@@ -7,7 +7,8 @@ S3ncrypted Proxy was created to make securely sharing Virtual Box images easy bu
 Generate yourself a strong password/key and put into a file:
 
 `
-umask 077 # the passphrase file will have perms 700
+# the passphrase file will have perms 700
+umask 077 
 openssl rand -base64 12 > .gpg_passphrase
 `
 
