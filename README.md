@@ -4,6 +4,12 @@ S3ncrypted Proxy was created to make securely sharing Virtual Box images easy bu
 
 # Quick Start
 
+Install s3ncrypted_proxy global, this will make the command s3ncryped_proxy available in your path (otherwise just install from git):
+
+```
+sudo npm install -g s3ncypted_proxy
+```
+
 Generate yourself a strong password/key and put into a file:
 
 ```
@@ -38,7 +44,7 @@ Create a config.json file in the S3Encrypted Proxy dir:
 {
 "aws_key": "<your key>",
 "aws_secret": "<you secret>",
-"gpg_passphrase_file" : "./.gpg_passphrase"
+"gpg_passphrase_file" : ".gpg_passphrase"
 }
 ```
 

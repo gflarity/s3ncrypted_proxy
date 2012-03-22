@@ -7,11 +7,11 @@ var crypto = require('crypto');
 var restify = require('restify');
 var http = require('http');
 
-var config = JSON.parse( fs.readFileSync( require.resolve('./config.json') ) );
+var config = JSON.parse( fs.readFileSync( require.resolve( process.cwd() + '/config.json') ) );
 
 var awsKey = config.aws_key;
 var awsSecret = config.aws_secret;
-var gpg_passphrase_file = require.resolve(config.gpg_passphrase_file);
+var gpg_passphrase_file = require.resolve( process.cwd() + "/" + config.gpg_passphrase_file);
 
 function sign( method ,resource, param_string, expiry, awsSecret ) {
         
