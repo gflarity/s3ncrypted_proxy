@@ -9,15 +9,15 @@
     "proxy",
     "vagrant"
   ],
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://github.com/gflarity/s3ncrypted_proxy",
   "repository": {
     "type": "git",
     "url": "git://github.com/gflarity/s3ncrypted_proxy.git"
   },
   "main": "./s3ncrypted_proxy.js",
-  "bin": { 
-    "s3ncrypted_proxy" : "s3ncrypted_proxy.js"
+  "bin": {
+    "s3ncrypted_proxy": "s3ncrypted_proxy.js"
   },
   "engines": {
     "node": ">=0.6"
