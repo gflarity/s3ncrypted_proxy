@@ -48,3 +48,11 @@ node s3ncrypted_proxy
 
 
 Now point vagrant, or whatever to http://localhost:8000/bucket/object. If the object ends in .gpg it will automatically decrypted on the fly as it downloads!
+
+# Sharing
+
+Use Amazon IAM to create new user credentials and give them read permissions to your encrypted files. They will need these and the .gpg_passphrase file in order to use S3ncrypted Proxy
+
+#Future Ideas
+
+I want to make uploading easy with curl.  It should be easy but I might not get to it for a while so feel free to send me a pull request.
