@@ -2,8 +2,14 @@
   "author": "Geoff Flarity <geoff.flarity@gmail.com> (http://gflarity.github.com)",
   "name": "s3ncrypted_proxy",
   "description": "S3ncrypted Proxy is simple proxy that makes securely sharing data via Amazon S3 easy",
-  "tags" : [ "amazon", "s3", "encryption", "proxy", "vagrant" ],
-  "version": "1.0.1",
+  "tags": [
+    "amazon",
+    "s3",
+    "encryption",
+    "proxy",
+    "vagrant"
+  ],
+  "version": "1.0.2",
   "homepage": "https://github.com/gflarity/s3ncrypted_proxy",
   "repository": {
     "type": "git",
@@ -14,8 +20,8 @@
     "node": ">=0.6"
   },
   "dependencies": {
-    "restify" : "1.3.0",
-    "request" : "2.9.153"
+    "restify": "1.3.0",
+    "request": "2.9.153"
   },
   "devDependencies": {},
   "optionalDependencies": {}
