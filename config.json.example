@@ -1,0 +1,7 @@
+{ 
+ 
+"aws_key": "YOUR_KEY_HERE"
+"aws_secret": "YOUR_SECRET_HERE"
+"gpg_passphrase_file" : "./.gpg_passphrase"
+    
+}
