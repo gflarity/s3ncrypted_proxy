@@ -6,25 +6,24 @@ S3ncrypted Proxy was created to make securely sharing Virtual Box images easy bu
 
 Generate yourself a strong password/key and put into a file:
 
-`
-# the passphrase file will have perms 700
-umask 077 
+```
+umask 077 # the passphrase file will have perms 700
 openssl rand -base64 12 > .gpg_passphrase
-`
+```
 
 Use this to encrypt your box file:
 
-`
+```
 gpg -c --passphrase-file .gpg_passphrase <file>
-`
+```
 
 Future versions will allow you to upload the file with curl. For now, use the S3 management GUI to upload the gpg encrypted <file>.gpg.
 
 Get the size of the orginal file:
 
-`
+```
 wc -c <file>
-`
+```
 
 Got into the properties of the uploaded gpg file in S3. Add the following meta data:
 
@@ -35,13 +34,13 @@ Click save.
 
 Create a config.json file in the S3Encrypted Proxy dir:
 
-`
+```
 {
 "aws_key": "<your key>",
 "aws_secret": "<you secret>",
 "gpg_passphrase_file" : "./.gpg_passphrase"
 }
-`
+```
 
 Start S3ncrypted Proxy:
 
