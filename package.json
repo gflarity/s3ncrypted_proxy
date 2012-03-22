@@ -16,6 +16,9 @@
     "url": "git://github.com/gflarity/s3ncrypted_proxy.git"
   },
   "main": "./s3ncrypted_proxy.js",
+  "bin": { 
+    "s3ncrypted_proxy" : "s3ncrypted_proxy.js"
+  }
   "engines": {
     "node": ">=0.6"
   },

@@ -29,7 +29,7 @@ function get_unecrypted_content_length( url, cb) {
     var host = matches[1];
     var path = matches[2];        
         
-    console.log(url);
+    //console.log(url);
     var options = {
       host: host,
       port: 80,
@@ -39,7 +39,7 @@ function get_unecrypted_content_length( url, cb) {
     
     
     var req = http.request(options, function(res) {        
-        console.log( JSON.stringify(res.headers) );
+        //console.log( JSON.stringify(res.headers) );
         cb( res.headers['x-amz-meta-gpg-content-length'] );
     });
     req.end();        
@@ -69,7 +69,7 @@ function gpg_proxy( req, res, next ) {
     
     var url_get = generate_url(  resource, expiry, sig_get, filename);
     var url_head = generate_url( resource, expiry, sig_head, filename );
-    console.log( url_get );
+    //console.log( url_get );
 
     //after we get the unencrypted content-length, send as the real one
     //along with the file
