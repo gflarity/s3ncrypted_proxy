@@ -9,7 +9,7 @@
     "proxy",
     "vagrant"
   ],
-  "version": "1.0.5",
+  "version": "1.0.6",
   "homepage": "https://github.com/gflarity/s3ncrypted_proxy",
   "repository": {
     "type": "git",
