@@ -6,6 +6,17 @@ var spawn = require('child_process').spawn;
 var crypto = require('crypto');
 var restify = require('restify');
 var http = require('http');
+var optimist = require('optimist');
+optimist.usage( 's3ncrypted_proxy -p <port> -c <config_file>');
+var argv = optimist.argv;
+    
+var config_file = argv.c || process.cwd() + '/config.json';
+var port = argv.p || '8000';
+
+if ( argv.h ) {
+    console.log(optimist.help());
+    process.exit(0);
+}
 
 var config = JSON.parse( fs.readFileSync( require.resolve( process.cwd() + '/config.json') ) );
 
@@ -117,4 +128,4 @@ server.get('/favicon.ico',  function ( req, res, next ) {
 server.get(/(.*\/)([\w\.\-\_]+\.gpg)$/, gpg_proxy );
 server.get(/(.*\/)([\w\.\-\_]+)$/, proxy );
 
-server.listen(8000);
+server.listen(port);
