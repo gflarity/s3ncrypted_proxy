@@ -23,7 +23,7 @@ Use this to encrypt your box file:
 gpg -c --passphrase-file .gpg_passphrase <file>
 ```
 
-Future versions will allow you to upload the file with curl. For now, use the S3 management GUI to upload the gpg encrypted <file>.gpg.
+Future versions will allow you to upload the file with curl. For now, use the S3 management GUI to upload the gpg encrypted <file>.gpg. 
 
 Get the size of the orginal file:
 
@@ -31,10 +31,10 @@ Get the size of the orginal file:
 wc -c <file>
 ```
 
-Got into the properties of the uploaded gpg file in S3. Add the following meta data:
+Go into the properties of the uploaded gpg file in S3. Add the following meta data:
 
 key: x-amz-meta-gpg-content-length
-value : <size of unencrypted file from above>
+value : &lt;size of unencrypted file from above&gt;
 
 Click save.
 
